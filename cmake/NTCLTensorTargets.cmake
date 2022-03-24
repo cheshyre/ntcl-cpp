@@ -1,5 +1,7 @@
 set(NTCL_TENSOR_SRC_LIB ${NTCL_ROOT_DIR}/ntcl-tensor/lib/libntcl_tensor_full.a)
 set(NTCL_TENSOR_BUILD_LIB ${NTCL_BUILD_DIR}/libntcl_tensor_full.a)
+set(NTCL_TENSOR_SRC_INC ${NTCL_ROOT_DIR}/ntcl-tensor/include)
+set(NTCL_TENSOR_BUILD_INC ${NTCL_BUILD_DIR}/include/ntcl-tensor)
 
 add_custom_target(
     ntcl_tensor_src_tree
@@ -22,11 +24,18 @@ add_custom_command(
     ntcl_tensor_src_tree
 )
 
+file(
+    MAKE_DIRECTORY
+    ${NTCL_TENSOR_BUILD_INC}
+)
+
 add_custom_command(
     OUTPUT
     ${NTCL_TENSOR_BUILD_LIB}
     COMMAND
     cp ${NTCL_TENSOR_SRC_LIB} ${NTCL_TENSOR_BUILD_LIB}
+    COMMAND
+    cp "${NTCL_TENSOR_SRC_INC}/*" "${NTCL_TENSOR_BUILD_INC}/"
     DEPENDS
     ${NTCL_TENSOR_SRC_LIB}
 )
@@ -47,4 +56,5 @@ set_target_properties(
     PROPERTIES
     IMPORTED_LOCATION ${NTCL_TENSOR_BUILD_LIB}
     INTERFACE_LINK_LIBRARIES "ntcl_data;ntcl_util"
+    INTERFACE_INCLUDE_DIRECTORIES ${NTCL_TENSOR_BUILD_INC}
 )
