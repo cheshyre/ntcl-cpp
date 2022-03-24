@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+# VS code
+.vscode/
+
+# Python virtual environment
+.venv/
+
+# CMake build directory
+build/
+
