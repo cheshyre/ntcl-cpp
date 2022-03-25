@@ -1,0 +1,29 @@
+add_library(
+    print_ntcl_string_module
+    print_string.f90
+)
+target_include_directories(
+    print_ntcl_string_module
+    PUBLIC
+    ${CMAKE_CURRENT_BINARY_DIR}
+)
+target_link_libraries(
+    print_ntcl_string_module
+    ntcl_util
+)
+add_library(
+    print_ntcl_short_string_module
+    print_short_string.f90
+    print_short_string.h
+)
+target_include_directories(
+    print_ntcl_short_string_module
+    PUBLIC
+    ${CMAKE_CURRENT_BINARY_DIR}
+)
+target_link_libraries(
+    print_ntcl_short_string_module
+    print_ntcl_string_module
+    short_string_ccompat
+    ntcl_util
+)

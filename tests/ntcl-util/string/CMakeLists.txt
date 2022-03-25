@@ -1,0 +1,19 @@
+add_executable(
+    hello_world_test_fort
+    hello_world_test_fort.f90
+)
+target_link_libraries(
+    hello_world_test_fort
+    print_ntcl_string_module
+    ntcl_util
+)
+add_executable(
+    hello_world_test_c
+    hello_world_test_c.c
+)
+target_link_libraries(
+    hello_world_test_c
+    print_ntcl_short_string_module
+    short_string_ccompat
+    ntcl_util
+)

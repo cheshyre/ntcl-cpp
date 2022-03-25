@@ -23,3 +23,6 @@ target_link_libraries(
     Main
     ntcl_util
 )
+
+add_subdirectory(c)
+add_subdirectory(tests)
