@@ -17,3 +17,13 @@ target_link_libraries(
     short_string_ccompat
     ntcl_util
 )
+add_executable(
+    hello_world_test_cpp
+    hello_world_test_cpp.cc
+)
+target_link_libraries(
+    hello_world_test_cpp
+    print_ntcl_short_string_module
+    short_string_ccompat
+    ntcl_util
+)
