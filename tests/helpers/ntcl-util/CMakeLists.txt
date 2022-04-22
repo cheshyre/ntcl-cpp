@@ -27,3 +27,37 @@ target_link_libraries(
     ntcl_c_short_string_ccompat
     ntcl_util::api
 )
+add_library(
+    print_ntcl_dictionary_module
+    print_dictionary.f90
+)
+target_include_directories(
+    print_ntcl_dictionary_module
+    PUBLIC
+    ${CMAKE_CURRENT_BINARY_DIR}
+)
+target_link_libraries(
+    print_ntcl_dictionary_module
+    PUBLIC
+    ntcl_util_dictionary
+    ntcl_util_string
+    print_ntcl_string_module
+)
+add_library(
+    print_ntcl_dictionary_ccompat_module
+    print_dictionary_ccompat.f90
+    print_dictionary_ccompat.h
+)
+target_include_directories(
+    print_ntcl_dictionary_ccompat_module
+    PUBLIC
+    ${CMAKE_CURRENT_BINARY_DIR}
+)
+target_link_libraries(
+    print_ntcl_dictionary_ccompat_module
+    PUBLIC
+    ntcl_util_dictionary
+    ntcl_util_string
+    print_ntcl_string_module
+    print_ntcl_dictionary_module
+)
