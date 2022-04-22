@@ -5,7 +5,7 @@ add_executable(
 target_link_libraries(
     hello_world_test_fort
     print_ntcl_string_module
-    ntcl_util
+    ntcl_util::api
 )
 add_executable(
     hello_world_test_c
@@ -15,7 +15,7 @@ target_link_libraries(
     hello_world_test_c
     print_ntcl_short_string_module
     short_string_ccompat
-    ntcl_util
+    ntcl_util::api
 )
 add_executable(
     hello_world_test_cpp
@@ -25,5 +25,5 @@ target_link_libraries(
     hello_world_test_cpp
     print_ntcl_short_string_module
     short_string_ccompat
-    ntcl_util
+    ntcl_util::api
 )

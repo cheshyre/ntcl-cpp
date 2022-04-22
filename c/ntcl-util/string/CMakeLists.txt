@@ -6,5 +6,5 @@ add_library(
 target_include_directories(
     short_string_ccompat
     PUBLIC
-    ${NTCL_ROOT_DIR}
+    ${NTCL_CPP_ROOT_DIR}
 )
