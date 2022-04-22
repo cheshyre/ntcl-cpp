@@ -1,0 +1,3 @@
+[submodule "ntcl"]
+	path = ntcl
+	url = https://github.com/cheshyre/ntcl
