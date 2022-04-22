@@ -2,7 +2,7 @@
 #ifndef TESTS_HELPERS_NTCL_UTIL_PRINT_SHORT_STRING_H_
 #define TESTS_HELPERS_NTCL_UTIL_PRINT_SHORT_STRING_H_
 
-#include "c/ntcl-util/string/short_string_ccompat.h"
+#include "ntcl-c/ntcl-util/string/short_string_ccompat.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -1,5 +1,5 @@
 // Copyright 2022 Matthias Heinz
-#include "c/ntcl-util/string/short_string_ccompat.h"
+#include "ntcl-c/ntcl-util/string/short_string_ccompat.h"
 
 #include <string.h>
 

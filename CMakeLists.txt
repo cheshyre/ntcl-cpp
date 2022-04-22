@@ -20,5 +20,5 @@ target_link_libraries(
     ntcl_util::api
 )
 
-add_subdirectory(c)
+add_subdirectory(ntcl-c)
 add_subdirectory(tests)

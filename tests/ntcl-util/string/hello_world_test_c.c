@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "c/ntcl-util/string/short_string_ccompat.h"
+#include "ntcl-c/ntcl-util/string/short_string_ccompat.h"
 #include "tests/helpers/ntcl-util/print_short_string.h"
 
 int main(void) {

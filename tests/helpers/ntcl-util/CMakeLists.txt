@@ -24,6 +24,6 @@ target_include_directories(
 target_link_libraries(
     print_ntcl_short_string_module
     print_ntcl_string_module
-    short_string_ccompat
+    ntcl_c_short_string_ccompat
     ntcl_util::api
 )
