@@ -1,0 +1,10 @@
+add_library(
+    ntcl_c_short_string_ccompat
+    short_string_ccompat.h
+    short_string_ccompat.c
+)
+target_include_directories(
+    ntcl_c_short_string_ccompat
+    PUBLIC
+    ${NTCL_CPP_ROOT_DIR}
+)

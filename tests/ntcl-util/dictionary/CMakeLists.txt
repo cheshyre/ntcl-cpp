@@ -1,0 +1,31 @@
+add_executable(
+    dictionary_hello_world_test_fort
+    dictionary_hello_world_test_fort.f90
+)
+target_link_libraries(
+    dictionary_hello_world_test_fort
+    print_ntcl_dictionary_module
+    ntcl_util_dictionary
+)
+add_executable(
+    dictionary_hello_world_test_c
+    dictionary_hello_world_test_c.c
+)
+target_link_libraries(
+    dictionary_hello_world_test_c
+    print_ntcl_dictionary_ccompat_module
+    ntcl_c_short_string_ccompat
+    ntcl_c_dictionary_ccompat
+    ntcl_util_dictionary
+)
+add_executable(
+    dictionary_hello_world_test_cpp
+    dictionary_hello_world_test_cpp.cc
+)
+target_link_libraries(
+    dictionary_hello_world_test_cpp
+    print_ntcl_dictionary_ccompat_module
+    ntcl_c_short_string_ccompat
+    ntcl_c_dictionary_ccompat
+    ntcl_util_dictionary
+)

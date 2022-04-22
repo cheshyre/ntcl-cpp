@@ -1,0 +1,16 @@
+add_library(
+    ntcl_c_dictionary_ccompat
+    INTERFACE
+)
+target_include_directories(
+    ntcl_c_dictionary_ccompat
+    INTERFACE
+    ${NTCL_CPP_ROOT_DIR}
+)
+target_link_libraries(
+    ntcl_c_dictionary_ccompat
+    INTERFACE
+    ntcl_c_short_string_ccompat
+    ntcl_util::string
+    ntcl_util::dictionary
+)
